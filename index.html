@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
@@ -27,7 +27,8 @@
 								Inscrits : <strong>3</strong>
 								<br>
 								Places :
-								<input class="input-mini" value="5">
+								<input ng-model="places" class="input-mini" value="">
+								<strong>{{places}}</strong>
 								<div class="progress">
 									<div class="bar" style="width: 60%;">
 										60%
@@ -174,5 +175,6 @@
 
 		<script type="text/javascript" src="./js/jquery.min.js"></script>
 		<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="./js/angular.min.js"></script>
 	</body>
 </html>
