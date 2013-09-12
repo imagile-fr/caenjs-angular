@@ -17,4 +17,16 @@ var AllocateController = function($scope) {
       seats: 4
     },
   ];
+
+  $scope.currentWorkshop = null;
+
+  $scope.makeCurrent = function(workshop) {
+    angular.forEach($scope.workshops, function(workshop) {
+      workshop.current = false;
+    });
+    workshop.current = true;
+    $scope.currentWorkshop = workshop;
+  }
+
+  $scope.makeCurrent($scope.workshops[0]);
 }

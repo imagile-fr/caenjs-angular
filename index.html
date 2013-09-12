@@ -21,13 +21,14 @@
 			<div ng-controller="AllocateController">
 				<div class="row">
 					<div class="span3" ng-repeat="workshop in workshops">
-						<div class="session">
-							<h4><a href="#" class="session-link">{{workshop.name}}</a></h4>
+						<div class="session" ng-class="{current: workshop.current}">
+							<h4><a class="session-link" ng-click="makeCurrent(workshop)">{{workshop.name}}</a></h4>
 							<p>
 								Inscrits : <strong>3</strong>
 								<br>
 								Places : 
-								<input ng-model="workshop.seats" class="input-mini">
+								<input ng-model="workshop.seats" class="input-mini" ng-show="workshop.current">
+								<strong ng-hide="workshop.current">{{workshop.seats}}</strong>
 								<div class="progress">
 									<div class="bar" style="width: 60%;">
 										60%
@@ -39,7 +40,7 @@
 
 				</div>
 
-				<h3>Atelier 1</h3>
+				<h3>{{currentWorkshop.name}}</h3>
 				<table class="table table-striped table-bordered table-hover">
 					<thead>
 						<th>ID</th>
