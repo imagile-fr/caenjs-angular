@@ -58,14 +58,8 @@
 										<span class="caret"></span>
 									</a>
 									<ol class="dropdown-menu sessions-ordered">
-										<li>
-											<a href="#">Atelier 2</a>
-										</li>
-										<li>
-											<a href="#">Atelier 3</a>
-										</li>
-										<li>
-											<a href="#">Atelier 4</a>
+										<li ng-repeat="workshop in workshops | filter:notCurrent">
+											<a href="#">{{workshop.name}}</a>
 										</li>
 									</ol>
 								</div>

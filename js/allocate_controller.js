@@ -50,4 +50,8 @@ var AllocateController = function($scope) {
   $scope.attendees = function(workshop) {
     return workshop.people.length;
   }
+
+  $scope.notCurrent = function(workshop) {
+    return (!workshop.current);
+  }
 }
