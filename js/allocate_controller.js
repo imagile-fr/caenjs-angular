@@ -46,4 +46,8 @@ var AllocateController = function($scope) {
   }
 
   $scope.makeCurrent($scope.workshops[0]);
+
+  $scope.attendees = function(workshop) {
+    return workshop.people.length;
+  }
 }

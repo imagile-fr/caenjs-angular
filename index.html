@@ -24,7 +24,7 @@
 						<div class="session" ng-class="{current: workshop.current}">
 							<h4><a class="session-link" ng-click="makeCurrent(workshop)">{{workshop.name}}</a></h4>
 							<p>
-								Inscrits : <strong>3</strong>
+								Inscrits : <strong>{{attendees(workshop)}}</strong>
 								<br>
 								Places : 
 								<input ng-model="workshop.seats" class="input-mini" ng-show="workshop.current">
