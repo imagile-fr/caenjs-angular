@@ -59,7 +59,7 @@
 									</a>
 									<ol class="dropdown-menu sessions-ordered">
 										<li ng-repeat="workshop in workshops | filter:notCurrent">
-											<a href="#">{{workshop.name}}</a>
+											<a ng-click="move(person.id, workshop)">{{workshop.name}}</a>
 										</li>
 									</ol>
 								</div>

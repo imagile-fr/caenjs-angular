@@ -54,4 +54,13 @@ var AllocateController = function($scope) {
   $scope.notCurrent = function(workshop) {
     return (!workshop.current);
   }
+
+  $scope.move = function(person_id, workshop) {
+    angular.forEach($scope.currentWorkshop.people, function(person, key) {
+      if (person.id == person_id) {
+        $scope.currentWorkshop.people.splice(key, 1);
+        workshop.people.push(person);
+      }
+    });
+  }
 }
