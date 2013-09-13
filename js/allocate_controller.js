@@ -78,4 +78,26 @@ var AllocateController = function($scope) {
   $scope.isOverCapacity = function(workshop) {
     return $scope.attendees(workshop) > workshop.seats;
   }
+
+  $scope.addPerson = function() {
+    $scope.currentWorkshop.people.push({
+      id: $scope.newId(),
+      name: $scope.personName
+    });
+    $scope.personName = '';
+  }
+
+  $scope.newId = function() {
+    var max = 0;
+
+    angular.forEach($scope.workshops, function(workshop) {
+      angular.forEach(workshop.people, function(person) {
+        if (person.id > max) {
+          max = person.id;
+        }
+      });
+    });
+
+    return max+1;
+  }
 }
