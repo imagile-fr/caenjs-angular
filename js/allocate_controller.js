@@ -63,4 +63,19 @@ var AllocateController = function($scope) {
       }
     });
   }
+
+  $scope.fillRatio = function(workshop) {
+    return Math.round($scope.attendees(workshop) * 100 / workshop.seats);
+  }
+
+  $scope.fillRatioWidth = function(workshop) {
+    if ($scope.isOverCapacity(workshop)) {
+      return 100;
+    }
+    return $scope.fillRatio(workshop);
+  }
+
+  $scope.isOverCapacity = function(workshop) {
+    return $scope.attendees(workshop) > workshop.seats;
+  }
 }

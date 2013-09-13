@@ -29,9 +29,9 @@
 								Places : 
 								<input ng-model="workshop.seats" class="input-mini" ng-show="workshop.current">
 								<strong ng-hide="workshop.current">{{workshop.seats}}</strong>
-								<div class="progress">
-									<div class="bar" style="width: 60%;">
-										60%
+								<div class="progress" ng-class="{'progress-danger': isOverCapacity(workshop)}">
+									<div class="bar" style="width: {{fillRatioWidth(workshop)}}%;">
+										{{fillRatio(workshop)}}%
 									</div>
 								</div>
 							</p>
