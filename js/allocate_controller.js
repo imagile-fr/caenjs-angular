@@ -2,19 +2,36 @@ var AllocateController = function($scope) {
   $scope.workshops = [
     {
       name: "Atelier 1",
-      seats: 5
+      seats: 5,
+      people: [
+        {id: 1, name: "Jean-Bernard Picot"},
+        {id: 2, name: "Jean-Michel Ledentu"},
+        {id: 3, name: "Yvette Mayeux"},
+      ]
     },
     {
       name: "Atelier 2",
-      seats: 2
+      seats: 2,
+      people: [
+        {id: 4, name: "Antoine Rousset"},
+        {id: 5, name: "Fernand Lefranc-Berger"},
+        {id: 6, name: "Pierre-Martin Charpon"},
+      ],
     },
     {
       name: "Atelier 3",
-      seats: 8
+      seats: 8,
+      people: [
+        {id: 7, name: "Jean-Marie Duvernois"},
+        {id: 8, name: "Hubert Francard"},
+      ],
     },
     {
       name: "Atelier 4",
-      seats: 4
+      seats: 4,
+      people: [
+        {id: 9, name: "Micheline Leboisier"},
+      ],
     },
   ];
 

@@ -48,57 +48,9 @@
 						<th>Actions</th>
 					</thead>
 					<tbody>
-						<tr>
-							<td>1</td>
-							<td>Jean-Bernard Picot</td>
-							<td>
-								<div class="btn-group">
-									<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-										Déplacer
-										<span class="caret"></span>
-									</a>
-									<ol class="dropdown-menu sessions-ordered">
-										<li>
-											<a href="#">Atelier 2</a>
-										</li>
-										<li>
-											<a href="#">Atelier 3</a>
-										</li>
-										<li>
-											<a href="#">Atelier 4</a>
-										</li>
-									</ol>
-								</div>
-							</td>
-						</tr>
-
-						<tr>
-							<td>2</td>
-							<td>Jean-Michel Ledentu</td>
-							<td>
-								<div class="btn-group">
-									<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-										Déplacer
-										<span class="caret"></span>
-									</a>
-									<ol class="dropdown-menu sessions-ordered">
-										<li>
-											<a href="#">Atelier 2</a>
-										</li>
-										<li>
-											<a href="#">Atelier 3</a>
-										</li>
-										<li>
-											<a href="#">Atelier 4</a>
-										</li>
-									</ol>
-								</div>
-							</td>
-						</tr>
-
-						<tr>
-							<td>3</td>
-							<td>Yvette Mayeux</td>
+						<tr ng-repeat="person in currentWorkshop.people">
+							<td>{{person.id}}</td>
+							<td>{{person.name}}</td>
 							<td>
 								<div class="btn-group">
 									<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
